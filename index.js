@@ -11,16 +11,17 @@ let cards = document.querySelectorAll(".card");
 let no_jobs_msg = document.getElementById("no_jobs_message");
 
 function updateTopCounts() {
-    let interview = 0, rejected = 0;
+    let interview = 0, rejected = 0, total = 0;
     cards.forEach(card => {
         if (!card.parentNode) return;
+        total++;
         let status = card.querySelector(".interview_mid").textContent;
         if (status === "INTERVIEW") interview++;
         else if (status === "REJECTED") rejected++;
     });
     interview_top.textContent = interview;
     rejected_top.textContent = rejected;
-    total_top.textContent = cards.length; 
+    total_top.textContent = total;
 }
 
 function updatePageCounts() {
@@ -33,43 +34,45 @@ function updatePageCounts() {
     no_jobs_msg.classList.toggle("hidden", visible > 0);
 }
 
-
 updateTopCounts();
 updatePageCounts();
 
 cards.forEach((card) => {
-    let interview_main = card.querySelector(".interview_main");
-    let rejected_main = card.querySelector(".rejected_main");
-    let interview_mid = card.querySelector(".interview_mid");
+    let interview_btn = card.querySelector(".interview_main");
+    let rejected_btn = card.querySelector(".rejected_main");
+    let status_text = card.querySelector(".interview_mid");
     let delete_btn = card.querySelector("button.absolute");
 
-    let current_status = null;
+    let current_status = status_text.textContent === "INTERVIEW" ? "interview"
+                       : status_text.textContent === "REJECTED" ? "rejected"
+                       : null;
 
-    interview_main.addEventListener("click", function() {
+    interview_btn.addEventListener("click", function() {
         if (current_status === "interview") return;
         current_status = "interview";
-        interview_mid.textContent = "INTERVIEW";
+        status_text.textContent = "INTERVIEW";
+        status_text.classList.remove("bg-slate-500","bg-red-500");
+        status_text.classList.add("bg-green-500");
         updateTopCounts();
         updatePageCounts();
     });
 
-    rejected_main.addEventListener("click", function() {
+    rejected_btn.addEventListener("click", function() {
         if (current_status === "rejected") return;
         current_status = "rejected";
-        interview_mid.textContent = "REJECTED";
+        status_text.textContent = "REJECTED";
+        status_text.classList.remove("bg-slate-500","bg-green-500");
+        status_text.classList.add("bg-red-500");
         updateTopCounts();
         updatePageCounts();
     });
 
     delete_btn.addEventListener("click", function() {
-       
-        if (card.style.display !== "none") {
-            card.style.display = "none"; 
-            updatePageCounts();
-        }
+        card.remove();
+        updateTopCounts();
+        updatePageCounts();
     });
 });
-
 
 all_btn.addEventListener("click", () => {
     cards.forEach(card => { if (card.parentNode) card.style.display = "block"; });

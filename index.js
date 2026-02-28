@@ -38,7 +38,6 @@ cards.forEach((card) => {
             let interview_Count = parseInt(interview_top.textContent) || 0;
             interview_top.textContent = interview_Count - 1;
         }
-
         let rejected_Count = parseInt(rejected_top.textContent) || 0;
         rejected_top.textContent = rejected_Count + 1;
 
@@ -59,7 +58,6 @@ cards.forEach((card) => {
         document.querySelector(".total").textContent = total_count - 1;
 
         card.remove();
-
         checkNoJobs(); 
     });
 });
@@ -81,7 +79,7 @@ only_interview_btn.addEventListener("click", () => {
         if (card.parentNode) {
             let status = card.querySelector(".interview_mid").textContent;
             if (status === "INTERVIEW") {
-                card.style.display = "block";
+                card.style.display = "block"
                 visible++;
             } else {
                 card.style.display = "none";

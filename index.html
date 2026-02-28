@@ -36,7 +36,7 @@
         </div>
         <div class="rounded p-8 bg-slate-200 shadow-xl min-h-[100px] sm:col-span-4">
             <h3>Interview</h3>
-            <h1 class="interview">0</h1>
+            <h1 class="interview" id="interview_top">0</h1>
         </div>
         <div class="rounded p-8 bg-slate-200 shadow-xl min-h-[100px] sm:col-span-4">
             <h3>Rejected</h3>
@@ -59,7 +59,7 @@
 
         <div class="grid grid-cols-1 sm:grid-cols-1 gap-6">
 
-            <div class="relative rounded-xl bg-white shadow-xl p-5 border">
+            <div class="card relative rounded-xl bg-white shadow-xl p-5 border">
                 <button
                     class="absolute top-3 right-3 w-7 h-7 flex items-center justify-center rounded-full bg-gray-100 hover:bg-red-100 text-gray-500 hover:text-red-600 transition">✕</button>
                 <h3 class="text-lg font-semibold">Frontend Developer</h3>
@@ -67,16 +67,18 @@
                 <p class="text-sm"><span class="font-medium">Location:</span> Dhaka</p>
                 <p class="text-sm"><span class="font-medium">Type:</span> Full-time</p>
                 <p class="text-sm"><span class="font-medium">Salary:</span> 80k - 120k BDT</p>
+                <p class="border  w-40 h-8 p-1 rounded shadow-xl text-white bg-slate-500 interview_mid">Not Applied</p>
+
                 <p class="text-sm text-gray-600 mt-2">Build modern UI with React.</p>
                 <div class="flex gap-3 mt-4">
                     <button
-                        class="flex-1 bg-green-500 hover:bg-green-600 text-white py-2 rounded-lg text-sm">Interview</button>
+                        class="flex-1 bg-green-500 hover:bg-green-600 text-white py-2 rounded-lg text-sm interview_main">Interview</button>
                     <button
                         class="flex-1 bg-red-500 hover:bg-red-600 text-white py-2 rounded-lg text-sm">Rejected</button>
                 </div>
             </div>
 
-            <div class="relative rounded-xl bg-white shadow-xl p-5 border">
+            <div class="card relative rounded-xl bg-white shadow-xl p-5 border">
                 <button
                     class="absolute top-3 right-3 w-7 h-7 flex items-center justify-center rounded-full bg-gray-100 hover:bg-red-100 text-gray-500 hover:text-red-600 transition">✕</button>
                 <h3 class="text-lg font-semibold">Backend Developer</h3>
@@ -84,17 +86,19 @@
                 <p class="text-sm"><span class="font-medium">Location:</span> Remote</p>
                 <p class="text-sm"><span class="font-medium">Type:</span> Full-time</p>
                 <p class="text-sm"><span class="font-medium">Salary:</span> 100k - 150k BDT</p>
+                <p class="border  w-40 h-8 p-1 rounded shadow-xl text-white bg-slate-500 interview_mid">Not Applied</p>
+
                 <p class="text-sm text-gray-600 mt-2">Work with APIs and databases.</p>
                 <div class="flex gap-3 mt-4">
                     <button
-                        class="flex-1 bg-green-500 hover:bg-green-600 text-white py-2 rounded-lg text-sm">Interview</button>
+                        class="flex-1 bg-green-500 hover:bg-green-600 text-white py-2 rounded-lg text-sm interview_main">Interview</button>
                     <button
                         class="flex-1 bg-red-500 hover:bg-red-600 text-white py-2 rounded-lg text-sm">Rejected</button>
                 </div>
             </div>
 
 
-            <div class="relative rounded-xl bg-white shadow-xl p-5 border">
+            <div class="card relative rounded-xl bg-white shadow-xl p-5 border">
                 <button
                     class="absolute top-3 right-3 w-7 h-7 flex items-center justify-center rounded-full bg-gray-100 hover:bg-red-100 text-gray-500 hover:text-red-600 transition">✕</button>
                 <h3 class="text-lg font-semibold">UI Designer</h3>
@@ -102,17 +106,19 @@
                 <p class="text-sm"><span class="font-medium">Location:</span> Dhaka</p>
                 <p class="text-sm"><span class="font-medium">Type:</span> Contract</p>
                 <p class="text-sm"><span class="font-medium">Salary:</span> 60k - 90k BDT</p>
+                <p class="border  w-40 h-8 p-1 rounded shadow-xl text-white bg-slate-500 interview_mid">Not Applied</p>
+
                 <p class="text-sm text-gray-600 mt-2">Design modern and user-friendly UI.</p>
                 <div class="flex gap-3 mt-4">
                     <button
-                        class="flex-1 bg-green-500 hover:bg-green-600 text-white py-2 rounded-lg text-sm">Interview</button>
+                        class="flex-1 bg-green-500 hover:bg-green-600 text-white py-2 rounded-lg text-sm interview_main">Interview</button>
                     <button
                         class="flex-1 bg-red-500 hover:bg-red-600 text-white py-2 rounded-lg text-sm">Rejected</button>
                 </div>
             </div>
 
             ->
-            <div class="relative rounded-xl bg-white shadow-xl p-5 border">
+            <div class="card relative rounded-xl bg-white shadow-xl p-5 border">
                 <button
                     class="absolute top-3 right-3 w-7 h-7 flex items-center justify-center rounded-full bg-gray-100 hover:bg-red-100 text-gray-500 hover:text-red-600 transition">✕</button>
                 <h3 class="text-lg font-semibold">Full Stack Developer</h3>
@@ -120,17 +126,19 @@
                 <p class="text-sm"><span class="font-medium">Location:</span> Chittagong</p>
                 <p class="text-sm"><span class="font-medium">Type:</span> Full-time</p>
                 <p class="text-sm"><span class="font-medium">Salary:</span> 110k - 160k BDT</p>
+                <p class="border  w-40 h-8 p-1 rounded shadow-xl text-white bg-slate-500 interview_mid">Not Applied</p>
+
                 <p class="text-sm text-gray-600 mt-2">Handle frontend & backend tasks.</p>
                 <div class="flex gap-3 mt-4">
                     <button
-                        class="flex-1 bg-green-500 hover:bg-green-600 text-white py-2 rounded-lg text-sm">Interview</button>
+                        class="flex-1 bg-green-500 hover:bg-green-600 text-white py-2 rounded-lg text-sm interview_main">Interview</button>
                     <button
                         class="flex-1 bg-red-500 hover:bg-red-600 text-white py-2 rounded-lg text-sm">Rejected</button>
                 </div>
             </div>
 
 
-            <div class="relative rounded-xl bg-white shadow-xl p-5 border">
+            <div class="card relative rounded-xl bg-white shadow-xl p-5 border">
                 <button
                     class="absolute top-3 right-3 w-7 h-7 flex items-center justify-center rounded-full bg-gray-100 hover:bg-red-100 text-gray-500 hover:text-red-600 transition">✕</button>
                 <h3 class="text-lg font-semibold">DevOps Engineer</h3>
@@ -138,16 +146,18 @@
                 <p class="text-sm"><span class="font-medium">Location:</span> Remote</p>
                 <p class="text-sm"><span class="font-medium">Type:</span> Full-time</p>
                 <p class="text-sm"><span class="font-medium">Salary:</span> 90k - 130k BDT</p>
+                <p class="border  w-40 h-8 p-1 rounded shadow-xl text-white bg-slate-500 interview_mid">Not Applied</p>
+
                 <p class="text-sm text-gray-600 mt-2">Manage CI/CD pipelines.</p>
                 <div class="flex gap-3 mt-4">
                     <button
-                        class="flex-1 bg-green-500 hover:bg-green-600 text-white py-2 rounded-lg text-sm">Interview</button>
+                        class="flex-1 bg-green-500 hover:bg-green-600 text-white py-2 rounded-lg text-sm interview_main">Interview</button>
                     <button
                         class="flex-1 bg-red-500 hover:bg-red-600 text-white py-2 rounded-lg text-sm">Rejected</button>
                 </div>
             </div>
 
-            <div class="relative rounded-xl bg-white shadow-xl p-5 border">
+            <div class=" card relative rounded-xl bg-white shadow-xl p-5 border">
                 <button
                     class="absolute top-3 right-3 w-7 h-7 flex items-center justify-center rounded-full bg-gray-100 hover:bg-red-100 text-gray-500 hover:text-red-600 transition">✕</button>
                 <h3 class="text-lg font-semibold">Mobile Developer</h3>
@@ -155,16 +165,18 @@
                 <p class="text-sm"><span class="font-medium">Location:</span> Sylhet</p>
                 <p class="text-sm"><span class="font-medium">Type:</span> Full-time</p>
                 <p class="text-sm"><span class="font-medium">Salary:</span> 75k - 115k BDT</p>
+                <p class="border  w-40 h-8 p-1 rounded shadow-xl text-white bg-slate-500 interview_mid">Not Applied</p>
+
                 <p class="text-sm text-gray-600 mt-2">Build cross-platform apps.</p>
                 <div class="flex gap-3 mt-4">
                     <button
-                        class="flex-1 bg-green-500 hover:bg-green-600 text-white py-2 rounded-lg text-sm">Interview</button>
+                        class="flex-1 bg-green-500 hover:bg-green-600 text-white py-2 rounded-lg text-sm interview_main">Interview</button>
                     <button
                         class="flex-1 bg-red-500 hover:bg-red-600 text-white py-2 rounded-lg text-sm">Rejected</button>
                 </div>
             </div>
 
-            <div class="relative rounded-xl bg-white shadow-xl p-5 border">
+            <div class="card relative rounded-xl bg-white shadow-xl p-5 border">
                 <button
                     class="absolute top-3 right-3 w-7 h-7 flex items-center justify-center rounded-full bg-gray-100 hover:bg-red-100 text-gray-500 hover:text-red-600 transition">✕</button>
                 <h3 class="text-lg font-semibold">Software Engineer</h3>
@@ -172,16 +184,18 @@
                 <p class="text-sm"><span class="font-medium">Location:</span> Dhaka</p>
                 <p class="text-sm"><span class="font-medium">Type:</span> Part-time</p>
                 <p class="text-sm"><span class="font-medium">Salary:</span> 70k - 100k BDT</p>
+                <p class="border  w-40 h-8 p-1 rounded shadow-xl text-white bg-slate-500 interview_mid">Not Applied</p>
+
                 <p class="text-sm text-gray-600 mt-2">Develop scalable systems.</p>
                 <div class="flex gap-3 mt-4">
                     <button
-                        class="flex-1 bg-green-500 hover:bg-green-600 text-white py-2 rounded-lg text-sm">Interview</button>
+                        class="flex-1 bg-green-500 hover:bg-green-600 text-white py-2 rounded-lg text-sm interview_main">Interview</button>
                     <button
                         class="flex-1 bg-red-500 hover:bg-red-600 text-white py-2 rounded-lg text-sm">Rejected</button>
                 </div>
             </div>
 
-            <div class="relative rounded-xl bg-white shadow-xl p-5 border">
+            <div class="card relative rounded-xl bg-white shadow-xl p-5 border">
                 <button
                     class="absolute top-3 right-3 w-7 h-7 flex items-center justify-center rounded-full bg-gray-100 hover:bg-red-100 text-gray-500 hover:text-red-600 transition">✕</button>
                 <h3 class="text-lg font-semibold">QA Engineer</h3>
@@ -189,15 +203,17 @@
                 <p class="text-sm"><span class="font-medium">Location:</span> Remote</p>
                 <p class="text-sm"><span class="font-medium">Type:</span> Full-time</p>
                 <p class="text-sm"><span class="font-medium">Salary:</span> 60k - 95k BDT</p>
+                <p class="border  w-40 h-8 p-1 rounded shadow-xl text-white bg-slate-500 interview_mid">Not Applied</p>
                 <p class="text-sm text-gray-600 mt-2">Test and ensure product quality.</p>
                 <div class="flex gap-3 mt-4">
                     <button
-                        class="flex-1 bg-green-500 hover:bg-green-600 text-white py-2 rounded-lg text-sm">Interview</button>
+                        class="flex-1 bg-green-500 hover:bg-green-600 text-white py-2 rounded-lg text-sm interview_main">Interview</button>
                     <button
                         class="flex-1 bg-red-500 hover:bg-red-600 text-white py-2 rounded-lg text-sm">Rejected</button>
                 </div>
             </div>
         </div>
+        <script src="index.js"></script>
 </body>
 
 </html>
